@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Демонтаж монтаж</title>
+    <link rel="stylesheet" href="normalize.css"> 
+    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Halant:300,400,500,600,700" rel="stylesheet">
+  </head>
+  <body>
+        <header>
+            <nav>
+                <input class="nav__check" type="checkbox" id="showmenu"/>
+                <label class="nav__showmenu" for="showmenu">&#9776;</label>
+                <ul class="menu">
+                    <li><a class="menu__item" href="#services">Услуги</a></li>
+                    <li><a class="menu__item" href="projects.html">Наши проекты</a></li>
+                    <li><a class="menu__item" href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>  
+  
+            <div>
+            <div class="hgroup">
+                <div class="logo"></div>
+                <h2>демонтаж</h2> 
+                <h1>монтаж</h1>
+                <p>строительная компания</p>
+            </div>
+            </div>
+        </header>  
+
+    <main class="wrapper"> 
+        <section class="action">
+            <p>Закажи полный комплекс работ по ремонту квартиры и получи</p>
+            <p class="pink">Проект в подарок!</p>
+            <div class="btn"><a href="#form" class="">Получить консультацию</a></div>
+        </section>
+
+        <div id="form" class="form__container">
+                <a href="#close" class="close">&#10006;</a>
+                <h4>Заявка</h4>
+                <hr/>
+                <form action="mailto:dnmnt@mail.ru" method="POST">
+                <div class="field-block">
+				    <label for="name">Ваше имя<span>*</span></label>
+				    <input id="name" class="field" name="name" required type="text">
+			    </div>
+			    <div class="field-block">
+				    <label for="email">Ваша электронная почта<span>*</span></label>
+				    <input id="email" class="field" name="email" required type="email">
+			    </div>
+                <div class="field-block">
+                    <label for="message">Ваше сообщение<span>*</span></label>
+                    <textarea id="message" class="field" required name="message" rows="3"></textarea>
+                </div>
+                <div class="pink__btn btn"><input class="button" type="submit" value="Отправить заявку!" /> </div>
+                </form>
+            </div>
+
+        <section id="services" class="content__wrapper">
+        <section class="repair">
+            <div class="img repair right"></div>
+            <div class="bg left">
+                <div><h3>Ремонт квартир</h3>
+                <a href="#popup1" class="detail">Подробнее&gt;</a></div>
+            </div>
+            <div id="popup1" class="popup"><div>
+                <a href="#close" class="close">&#10006;</a>
+                <p>Капитальный</p>
+                <p>Косметический</p>
+                <p>Индивидуальный</p></div>
+            </div>
+        </section>
+
+        <section class="demount">
+            <div class="img demount left"></div>
+            <div class="bg right">
+                <div><h3>Демонтажные работы</h3>
+                <a href="#popup2" class="detail">Подробнее&gt;</a></div>
+            </div>
+            <div id="popup2" class="popup middle"><div>
+                <a href="#close" class="close">&#10006;</a>
+                <p>Демонтаж фундамента</p>
+                <p>Демонтаж стен</p>
+                <p>Демонтаж перекрытий</p>
+                <p>Алмазная резка</p>
+                <p>Алмазное бурение</p></div>
+            </div>
+        </section>
+        
+        <section class="build">
+            <div class="img build right"></div>
+            <div class="bg left">
+                <div><h3>Загородное строительство</h3>
+                <a href="#popup3" class="detail">Подробнее&gt;</a></div>
+            </div>
+            <div id="popup3" class="popup"><div>
+                <a href="#close" class="close">&#10006;</a>
+                <p>Фундамент</p>
+                <p>Стены</p>
+                <p>Кровля</p>
+                <p>Внутренняя и внешняя отделка</p></div>
+            </div>
+        </section>
+        
+        <section class="houses">
+            <div class="img houses left"></div>
+            <div class="bg right">
+                <div><h3>Каркасные дома</h3>
+                <a href="#popup4" class="detail">Подробнее&gt;</a></div>
+            </div>
+            <div id="popup4" class="popup long"><div>
+                <a href="#close" class="close">&#10006;</a>
+                <p>- скандинавская технология с минимальным количеством мостиков холода</p>
+                <p> - услуги риелтора, оформление земли, оформление дома, налоговые вычеты</p>
+                <p> - все сезонность отделки, отсутствие "мокрых" процессов при строительстве и ровные поверхности упрощают отделку</p>
+                <p> - быстровозводимость и относительно низкая стоимость строительства</p>
+                <p> - наша гарантия на всё - 5 лет</p></div>
+            </div>
+        </section>
+
+        <section class="bath">
+            <div class="img bath right"></div>
+            <div class="bg left">
+                <div><h3>Бани</h3>
+                <a href="#popup5" class="detail">Подробнее&gt;</a></div>
+            </div>
+            <div id="popup5" class="popup"><div>
+                <a href="#close" class="close">&#10006;</a>
+                <p>Бревно</p>
+                <p>Брус</p>
+                <p>Блоки</p></div>
+            </div>
+        </section>
+
+        <section class="commertial">
+            <div class="img commertial left"></div>
+            <div class="bg right">
+                <div><h3>Коммерческое строительство</h3>
+                <a href="#popup6" class="detail">Подробнее&gt;</a></div>
+            </div>
+            <div id="popup6" class="popup"><div>
+                <a href="#close" class="close">&#10006;</a>
+                <p>Магазины</p>
+                <p>Бары</p>
+                <p>Кафе</p>
+                <p>Рестораны</p>
+                <p>Офисы</p></div>
+            </div>
+        </section>
+
+        <section class="garages">
+            <div class="img garages right"></div>
+            <div class="bg left">
+                <div><h3>Хозяйственные постройки</h3>
+                <a href="#popup7" class="detail">Подробнее&gt;</a></div>
+            </div>
+            <div id="popup7" class="popup"><div>
+                <a href="#close" class="close">&#10006;</a>
+                <p>Заборы</p>
+                <p>Гаражи</p>
+                <p>Беседки</p>
+                <p>Теплицы</p>
+                <p>Барбекю</p></div>
+            </div>
+        </section>
+
+        <section class="design">
+            <div class="img design left"></div>
+            <div class="bg right">
+                <div><h3>Дизайн</h3>
+                <a href="#popup8" class="detail">Подробнее&gt;</a></div>
+            </div>
+            <div id="popup8" class="popup"><div>
+                <a href="#close" class="close">&#10006;</a>
+                <p>Жилые и нежилые помещения</p></div>
+            </div>
+        </section>
+
+        <section class="outdoor">
+            <div class="img outdoor right"></div>
+            <div class="bg left">
+                <div><h3>Ландшафтный дизайн</h3>
+                <a href="#popup9" class="detail">Подробнее&gt;</a></div>
+            </div>
+            <div id="popup9" class="popup"><div>
+                <a href="#close" class="close">&#10006;</a>
+                <p>Альпийская горка</p>
+                <p>Проектирование</p>
+                <p>Планировка</p></div>
+            </div>
+        </section>
+
+        <section class="bathroom">
+            <div class="img bathroom left"></div>
+            <div class="bg right">
+                <div><h3>Сантехнические работы</h3>
+                <a href="#popup10"class="detail">Подробнее&gt;</a></div>
+            </div>
+            <div id="popup10" class="popup middle"><div>
+                <a href="#close" class="close">&#10006;</a>
+                <p>От смесителя до скважины трубопровода</p>
+                <p>Изготовление проектной документации</p></div>
+            </div>
+        </section>
+
+        <section class="electrik">
+            <div class="img electrik right"></div>
+            <div class="bg left">
+                <div><h3>Электромонтажные работы</h3>
+                <a href="#popup11" class="detail">Подробнее&gt;</a></div>
+            </div>
+            <div id="popup11" class="popup middle"><div>
+                <a href="#close" class="close">&#10006;</a>
+                <p>От замены лампочки до ЛЭП </p>
+                <p>Изготовление проектной документации</p></div>
+            </div>
+        </section>
+    </section>
+
+        <section class="furniture">
+            <div class="top"><h3>Производство мебели</h3>
+                <a href="#popup12" class="detail">Подробнее&gt;</a></div>
+            <div id="popup12" class="popup"><div>
+                <a href="#close" class="close">&#10006;</a>
+                <p>Элементы интерьера</p>
+                <p>Двери</p>
+                <p>Лестницы</p></div>
+            </div>
+            <div class="img coach"></div>
+            <h3>УМНЫЙ ДОМ<br/>
+                ВИДЕОНАБЛЮДЕНИЕ<br/>
+                СПУТНИКОВОЕ ТВ</h3>
+            <div class="line"></div>
+            <div class="bottom"><h3>сервисное обслуживание загородного жилья</h3>
+                <a href="#popup13" class="detail">Подробнее&gt;</a> 
+            </div>
+            <div id="popup13" class="popup middle"><div>
+                <a href="#close" class="close">&#10006;</a>
+                <p>Полный комплекс услуг + выезд специалистов в течение 30 минут (мелкий ремонт,электрика, сантехника, видеонаблюдение, ворота и другие нестандартные виды работ)</p>
+            </div>
+            </div>
+        </section>
+
+    </main>
+    <footer id="contacts">
+            <div>
+            <a href="tel: +79221277721" class="tel">8 (922) 12-777-21</a>
+            <p class="allday">Круглосуточно</p>
+            <p>Самый посещаемый строительный сайт</p>
+            <section class="socials">
+                    <a href="mailto:dnmnt@mail.ru"><div class="mail"></div></a>
+                    <a href="https://www.instagram.com/demontage_montage/"><div class="insta"></div></a>
+                    <a href="https://www.facebook.com/Демонтаж-Монтаж-1158827117632302/"><div class="fb"></div></a>
+            </section>       
+            <div class="cr"><span>Демонтаж-Монтаж</span><span>&copy; 2019</span><span>Все права защищены</span></div>
+            
+        </div>
+        </footer>
+
+</body>
+</html>
