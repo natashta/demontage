@@ -125,7 +125,7 @@ header>div {
     margin-top: 160px;
     width: 100%;
     min-width: 320px;
-    height: 1000px;
+    height: 100vh;
     background-image: url(src/livingroom.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -360,104 +360,18 @@ footer a {
     margin: 0 auto;
 }
 
-.img.repair{
-    background-image: url(src/interrier.jpg);
-}
-.img.demount {
-    background-image: url(src/demount3.png);
-}
-.img.build{
-    background-image: url(src/gardenhouse.JPG);
-}
-.img.houses{
-    background-image: url(src/boards.jpg);
-}
-.img.bath{
-    background-image: url(src/bathhouse.jpg);
-}
-.img.commertial{
-    background-image: url(src/caffeinterior.jpg);
-}
-.img.garages{
-    background-image: url(src/garage.jpg);
-}
-.img.design{
-    background-image: url(src/dinnerum.jpg);
-}
-.img.landscape{
-    background-image: url(src/gardenworks.jpg);
-}
-.img.bathroom{
-    background-image: url(src/watertube.jpg);
-}
-.img.electrik{
-    background-image: url(src/counter.jpg);
-}
+.img.repair{background-image: url(src/interrier.jpg);}
+.img.demount {background-image: url(src/demount3.png);}
+.img.build{background-image: url(src/gardenhouse.JPG);}
+.img.houses{background-image: url(src/boards.jpg);}
+.img.bath{background-image: url(src/bathhouse.jpg);}
+.img.commertial{background-image: url(src/caffeinterior.jpg);}
+.img.garages{background-image: url(src/garage.jpg);}
+.img.design{background-image: url(src/dinnerum.jpg);}
+.img.outdoor{background-image: url(src/gardenworks.jpg);}
+.img.bathroom{background-image: url(src/watertube.jpg);}
+.img.electrik{background-image: url(src/counter.jpg);}
 
-
-@media (min-width: 1100px){
-.img, .bg {
-    width: 48%;
-    min-height: 50vh;
-}
-.content__wrapper .left, .projects .left {float: left;}
-.content__wrapper .right, .projects .right {float: right;}
-.furniture {clear: both;}
-.content__wrapper>section {width: 100%;}
-.menu__item {font-size: 33px;}
-.action p.pink {font-size: 40px;}
-.tel {font-size: 44px;} 
-.popup{
-font-size: 2.25em;
-letter-spacing: 0.17em;
-    }
-}
-
-@media (max-width: 829px) {
-    .menu__item {font-size: 22px; letter-spacing: 0.1em;}
-    .hgroup {margin-left: 10%;}
-}
-
-@media screen and (orientation:landscape) {
-    .form__container{
-        top: 10%;
-    }
-}
-
-@media (max-width: 730px) {
-    /*размер формы и попап миддл*/
-}
-
-@media (max-width: 419px)  { 
-    nav>label.nav__showmenu {display: block;}
-    nav .menu {
-        display: none;
-        position: absolute;
-        margin-top: 40px;
-        text-align: left;
-        height: 100%;
-        height: 260px;
-        width: 220px;
-        -webkit-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
-        transition: all 0.5s ease;
-    }
-    nav .menu li {
-        display:block;
-        margin: 30px;
-    }
-    .nav__check:checked~ul.menu {display: block;}
-    .nav__check:checked+label.nav__showmenu {opacity:0.5;}
-
-    header>div, .projects__wrapper {margin-top: 0px;}
-    h1{font-size: 50px;}
-    h2{font-size: 46px;}
-    .hgroup p{
-        font-size: 13px; letter-spacing: 0.06em;
-    }
-    .action {font-size: 18px;}
-}
 
 .projects {
     margin: 0 auto;
@@ -505,7 +419,7 @@ figure img {
 }
 
 figcaption h3 {
-    font-size: 35px;
+font-size: 35px;
 line-height: 45px;
 text-align: center;
 letter-spacing: 0.1em;
@@ -558,15 +472,116 @@ h2.pink{
 .portrait img:hover, img.port:hover {cursor: pointer; width:320px; position: absolute;}
 */
 
+
+@media (min-width: 1130px){
+    .img, .bg {
+        width: 48%;
+        min-height: 50vh;
+    }
+    .content__wrapper .left, .projects .left {float: left;}
+    .content__wrapper .right, .projects .right {float: right;}
+    .furniture {clear: both;}
+    .content__wrapper>section {width: 100%;}
+    .menu__item {font-size: 33px;}
+    .action p.pink {font-size: 40px;}
+    .tel {font-size: 44px;} 
+    .popup{
+    font-size: 2.25em;
+    letter-spacing: 0.17em;
+        }
+    }
+    
+    @media (max-width: 839px) {
+        .menu__item {font-size: 22px; letter-spacing: 0.1em;}
+        .hgroup {margin-left: 10%;}
+        h2.pink {
+            font-size: 46px;
+            padding: 50px;
+            margin-top: 70px;
+            margin-bottom: 160px;
+        }
+        
+        figcaption h3 {font-size: 26px;}
+        .projects__wrapper {padding-left: 0px; padding-right: 0px;}
+    }
+    
+    @media screen and (orientation:landscape) {
+        .form__container{
+            top: 10%;
+        }
+    }
+    
+    @media (max-width: 759px) {
+        figure img {
+            width: 500px;
+            height: 450px;
+        }
+        .action .btn {padding: 16px; line-height: 1;}
+        .action .btn>a {font-size: 26px; letter-spacing: 0.06em;}
+        /*размер формы и попап миддл*/
+    }
+    
+    @media (max-width: 539px)  { 
+        nav>label.nav__showmenu {display: block;}
+        nav .menu {
+            display: none;
+            position: absolute;
+            margin-top: 40px;
+            text-align: left;
+            height: 100%;
+            height: 260px;
+            width: 220px;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        nav .menu li {
+            display:block;
+            margin: 30px;
+        }
+        .nav__check:checked~ul.menu {display: block;}
+        .nav__check:checked+label.nav__showmenu {opacity:0.5;}
+    
+        header>div, main.projects__wrapper, main.houses__wrapper {margin-top: 0px;}
+        h1{font-size: 50px;}
+        h2{font-size: 46px;}
+        .hgroup p{
+            font-size: 13px; letter-spacing: 0.06em;
+        }
+        .action {font-size: 18px;}
+        h2.pink {
+            font-size: 32px;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        figcaption h3 {
+            font-size: 22px;
+            line-height: 35px;
+        }  
+        figure {margin-top: 200px;}
+        figure img {
+            width: 420px;
+            height: 378px;
+        }
+        .tel {font-size: 1.2em; letter-spacing: 0.1em;}
+    }
+
+    @media (max-width:420px){
+    figure img {
+        width: 300px;
+        height: 270px;
+    }
+    }
+
 @media (min-width: 1600px){
 .houses__img>div {float: left;}
 .landscape {max-width: 1036px;}
 .center {margin-top: 90px;}
-.middle {margin-top: 30px;}
+img.middle {margin-top: 30px;}
 img.eq {margin-bottom: 30px;}
+img.up {margin-bottom: 60px;}
 }
 
-@media (max-width: 840px) {
 
-}
 
