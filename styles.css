@@ -36,8 +36,11 @@ main.wrapper {max-width: 1600px;}
 	transition: all 0.5s ease;
 }
 .middle{width: 700px;}
-.long {width: 98%;
-max-width: 1200px;}
+.long {width: 90%;
+max-width: 1200px;
+height: 60vh;
+}
+.long>div {overflow-y: scroll;}
 
 .popup:target {
     display: table;
@@ -129,7 +132,7 @@ header>div {
     background-image: url(src/livingroom.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top center;
 }
 
 .hgroup {
@@ -171,7 +174,7 @@ p.pink, a.detail {
 }
 .action .btn{
     overflow: hidden;
-    width: 60%;
+    max-width: 66%;
     text-align: center;
     margin: 0 auto;
     border-radius: 50px;
@@ -484,6 +487,7 @@ h2.pink{
     .content__wrapper>section {width: 100%;}
     .menu__item {font-size: 33px;}
     .action p.pink {font-size: 40px;}
+    .action .btn {max-width: 45%;}
     .tel {font-size: 44px;} 
     .popup{
     font-size: 2.25em;
@@ -518,6 +522,7 @@ h2.pink{
         }
         .action .btn {padding: 16px; line-height: 1;}
         .action .btn>a {font-size: 26px; letter-spacing: 0.06em;}
+        .tel{letter-spacing: 0.16em}
         /*размер формы и попап миддл*/
     }
     
@@ -547,7 +552,7 @@ h2.pink{
         h1{font-size: 50px;}
         h2{font-size: 46px;}
         .hgroup p{
-            font-size: 13px; letter-spacing: 0.06em;
+            font-size: 16px; letter-spacing: 0.06em;
         }
         .action {font-size: 18px;}
         h2.pink {
@@ -564,7 +569,9 @@ h2.pink{
             width: 420px;
             height: 378px;
         }
-        .tel {font-size: 1.2em; letter-spacing: 0.1em;}
+        .wrapper h3 {font-size: 1.8em; letter-spacing: 0.18em;}
+        .detail {letter-spacing: 0.2em; font-size: 2em;}
+        .tel {font-size: 1.6em; letter-spacing: 0.1em;}
     }
 
     @media (max-width:420px){
@@ -572,6 +579,7 @@ h2.pink{
         width: 300px;
         height: 270px;
     }
+    .tel {font-size: 1.6em;}
     }
 
 @media (min-width: 1600px){
