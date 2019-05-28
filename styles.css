@@ -8,17 +8,14 @@ body {
     background-color: white;
     font-family: Halant, sans-serif;
 }
-
-main.wrapper {max-width: 1600px;}
-    main:not(.wrapper) {
-    margin: 0 auto;
-    margin-top:160px;
-}
+main { margin: 0 auto;}
+main:not(.wrapper) { margin-top:160px;}
 
 .popup {
     background: rgb(216, 215, 215);
-    width: 570px;
+    max-width: 570px;
     height: 500px;
+    overflow-y: scroll;
     font-size: 2em;
     letter-spacing: 0.1em;
     padding-left: 1.5em;
@@ -35,22 +32,24 @@ main.wrapper {max-width: 1600px;}
     -o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 }
-.middle{width: 700px;}
-.long {width: 90%;
-max-width: 1200px;
-height: 60vh;
-}
+
 .long>div {overflow-y: scroll;}
 
 .popup:target {
-    display: table;
+    display: flex;
+    align-items: center;
 }
 .popup>div{
-    display: table-cell;
-    vertical-align: middle;
+    display: block;
     text-align: left;
 }
 .close {color: black;}
+.middle{max-width: 700px;}
+.popup.long {width: 90%;
+max-width: 1200px;
+overflow-y: scroll;
+align-items: flex-start;
+}
 
 .bg, nav, footer, .menu, .nav__showmenu {
     background: #EDEDED;
@@ -240,7 +239,7 @@ input {height: 50px;}
 textarea {height: 100px;}
 
 .form__container .close {padding: 10px;}
-h4 {margin: 40px 0 20px 60px;}
+h4 {margin: 30px 0 20px 60px;}
 
 label>span {color: #DC1883;}
 .pink__btn {
@@ -249,7 +248,7 @@ label>span {color: #DC1883;}
     background: #DC1883;
     box-shadow: 4px 4px 4px rgba(220, 24, 131, 0.2);
     border-radius: 30px;
-    width: 350px;
+    max-width: 350px;
     text-align: center;
     margin: 0 auto;
     padding: 6px;
@@ -316,6 +315,8 @@ footer a {
     background-size: contain;
 }
 
+.content__wrapper {width: 98%; margin: 0 auto;}
+
 .content__wrapper>section {
     min-width: 320px;
     margin: 0 auto;
@@ -349,13 +350,14 @@ footer a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
+    width: 98%;
     height: 720px;
     margin: 0.6em;
 }
 .img:not(.electrik):not(.coach) {
     -webkit-box-shadow: 7px 7px 5px 0px rgba(209, 209, 209, 0.6);
     -moz-box-shadow: 7px 7px 5px 0px rgba(209, 209, 209, 0.6);
+    -ms-box-shadow: 7px 7px 5px 0px rgba(209, 209, 209, 0.6);
     box-shadow: 7px 7px 5px 0px rgba(209, 209, 209, 0.6);
 }
 .img.electrik {
@@ -376,9 +378,7 @@ footer a {
 .img.electrik{background-image: url(src/counter.jpg);}
 
 
-.projects {
-    margin: 0 auto;
-}
+.projects {margin: 0 auto;}
 
 .pin:before{
 position: absolute;
@@ -406,19 +406,18 @@ figure {
     position: relative;
     background: linear-gradient(270.75deg, rgba(255, 255, 255, 0.6) 1.67%, rgba(216, 213, 210, 0.6) 100.48%);
     box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
-    display: block; 
     max-width: 645px; 
     max-height: 757px; 
     text-align: center; 
-    margin-top: 420px;
+    margin-top: 90px;
+    margin-bottom: 200px;
    }
-.nomargin {margin-top: 0px;
-}
+
 figure img {
     width: 600px;
     height: 540px;
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    margin: 20px 20px 0px;
 }
 
 figcaption h3 {
@@ -426,8 +425,20 @@ font-size: 35px;
 line-height: 45px;
 text-align: center;
 letter-spacing: 0.1em;
-color: #DC1883
+color: #DC1883;
+margin-top: -20px;
 }
+.row {
+    width: 100%;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    }
 
 h2.pink{
     position: relative;
@@ -470,11 +481,6 @@ h2.pink{
 .landscape.malevich {max-width: 700px;}
 .landscape img, .land {width:320px;}
 .portrait img, .port {width: 180px;}
-/*
-.landscape img:hover, img.land:hover {cursor: pointer; width: 600px; position: absolute;} 
-.portrait img:hover, img.port:hover {cursor: pointer; width:320px; position: absolute;}
-*/
-
 
 @media (min-width: 1130px){
     .img, .bg {
@@ -493,7 +499,10 @@ h2.pink{
     font-size: 2.25em;
     letter-spacing: 0.17em;
         }
-    }
+    .row {flex-direction: row;}
+    .up {margin-bottom: 420px;}
+    .down {margin-top: 420px;}
+}
     
     @media (max-width: 839px) {
         .menu__item {font-size: 22px; letter-spacing: 0.1em;}
@@ -504,14 +513,20 @@ h2.pink{
             margin-top: 70px;
             margin-bottom: 160px;
         }
-        
-        figcaption h3 {font-size: 26px;}
+        .popup.long {
+            padding-left: 10px;
+            letter-spacing: 2px;
+            font-size: 28px;
+            height: 100%;
+            top: 6%;
+        }
+         figcaption h3 {font-size: 26px;}
         .projects__wrapper {padding-left: 0px; padding-right: 0px;}
     }
     
     @media screen and (orientation:landscape) {
         .form__container{
-            top: 10%;
+            top: 6%;
         }
     }
     
@@ -522,8 +537,16 @@ h2.pink{
         }
         .action .btn {padding: 16px; line-height: 1;}
         .action .btn>a {font-size: 26px; letter-spacing: 0.06em;}
-        .tel{letter-spacing: 0.16em}
-        /*размер формы и попап миддл*/
+        .tel {letter-spacing: 0.16em;}
+        .form__container {
+            max-width: 100%;
+            height: 96%;
+            top: 6%;
+        }
+        .popup.middle {
+            padding-left: 10px;
+            letter-spacing: 2px;
+        }
     }
     
     @media (max-width: 539px)  { 
@@ -555,6 +578,12 @@ h2.pink{
             font-size: 16px; letter-spacing: 0.06em;
         }
         .action {font-size: 18px;}
+        form {
+            margin-right: 30px;
+            margin-left: 30px;
+        }
+        .popup.middle {font-size: 28px; line-height: 32px;}
+        .popup.long {font-size: 28px; line-height: 32px;}
         h2.pink {
             font-size: 32px;
             padding: 20px;
@@ -569,8 +598,9 @@ h2.pink{
             width: 420px;
             height: 378px;
         }
+        .img, .bg {height: 600px;}
         .wrapper h3 {font-size: 1.8em; letter-spacing: 0.18em;}
-        .detail {letter-spacing: 0.2em; font-size: 2em;}
+        .detail {letter-spacing: 0.2em; font-size: 1.8em;}
         .tel {font-size: 1.6em; letter-spacing: 0.1em;}
     }
 
@@ -580,6 +610,10 @@ h2.pink{
         height: 270px;
     }
     .tel {font-size: 1.6em;}
+    .wrapper h3 {
+        font-size: 1.4em;
+        letter-spacing: 0.16em;
+    }
     }
 
 @media (min-width: 1600px){
